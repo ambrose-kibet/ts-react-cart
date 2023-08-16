@@ -40,7 +40,7 @@ const initialState: cart = {
   amount: 0,
 };
 
-const CartContext = createContext({
+const CartContext = createContext<cart & contextActions>({
   ...initialState,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   addToCart: (payload: payloadType) => {},
