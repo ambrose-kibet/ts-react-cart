@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import {
   createContext,
   ReactElement,
@@ -42,13 +43,17 @@ const initialState: cart = {
 
 const CartContext = createContext<cart & contextActions>({
   ...initialState,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  addToCart: (payload: payloadType) => {},
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  removeFromCart: ({ id }: payloadType) => {},
+
+  addToCart: (payload: payloadType) => {
+    payload;
+  },
+  removeFromCart: ({ id }: payloadType) => {
+    id;
+  },
   clearCart: () => {},
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  toggleAmount: (payload: payloadType) => {},
+  toggleAmount: (payload: payloadType) => {
+    payload;
+  },
 });
 
 const CartProvider = ({ children }: ChildrenType) => {
@@ -87,5 +92,6 @@ const CartProvider = ({ children }: ChildrenType) => {
   );
 };
 export default CartProvider;
+
 export const useCartContext = (): cart & contextActions =>
   useContext(CartContext);

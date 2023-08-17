@@ -40,6 +40,7 @@ const ProductsProvider = ({ children }: contextType) => {
     } catch (error) {
       console.log(error);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     fetchProducts();
@@ -53,6 +54,7 @@ const ProductsProvider = ({ children }: contextType) => {
 };
 export default ProductsProvider;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useProductsContext = (): useProductsContextType => {
   return useContext(ProductsContext);
 };
