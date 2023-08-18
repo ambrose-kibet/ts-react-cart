@@ -23,12 +23,12 @@ type useProductsContextType = {
   isLoading: boolean;
 };
 const url = 'https://course-api.com/react-useReducer-cart-project';
-const ProductsContext = createContext({
+export const ProductsContext = createContext<useProductsContextType>({
   products: [],
   isLoading: false,
 });
 const ProductsProvider = ({ children }: contextType) => {
-  const [products, setProducts] = useState({
+  const [products, setProducts] = useState<useProductsContextType>({
     products: [],
     isLoading: false,
   });

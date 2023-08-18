@@ -5,7 +5,7 @@ import { describe, it, expect } from 'vitest';
 
 describe('error page', () => {
   it('renders Errorpage correctly', () => {
-    const container = render(
+    const { container } = render(
       <MemoryRouter>
         <ErrorPage />
       </MemoryRouter>

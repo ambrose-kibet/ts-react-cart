@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cart page test > should render correctly 1`] = `
+<div>
+  <h2
+    style="text-align: center;"
+  >
+    Your Cart is Empty
+  </h2>
+</div>
+`;

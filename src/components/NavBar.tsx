@@ -10,7 +10,9 @@ const Navbar = () => {
       </Link>
       <Link to="/cart" className="cart">
         <FaShoppingCart className="cart-icon" />
-        <span className="pill">{total}</span>
+        <span className="pill" data-testid="cart-count">
+          {total}
+        </span>
       </Link>
     </nav>
   );

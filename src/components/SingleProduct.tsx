@@ -10,7 +10,12 @@ const SingleProduct = ({ product }: productPropType) => {
   return (
     <article className="card">
       <div className="card-header">
-        <img src={product.img} alt={product.title} width={'100%'} />
+        <img
+          src={product.img}
+          alt={product.title}
+          width={'100%'}
+          data-testid="product-image"
+        />
       </div>
       <div className="card-body">
         <h5>{product.title}</h5>
